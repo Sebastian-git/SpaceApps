@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import "./Home.css"
+import BarGraph from "./Test.js"
 
 class Home extends Component {
 
@@ -11,6 +12,9 @@ class Home extends Component {
     return (
     <React.Fragment>
         <p> Hello world </p>
+
+        <BarGraph />
+        
     </React.Fragment>
     )
   }
