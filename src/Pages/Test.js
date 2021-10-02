@@ -5,27 +5,29 @@ import { format, parseISO, subDays } from "date-fns";
   const data = [];
   for (let num = 30; num >= 0; num--) {
     data.push({
-      date: subDays(new Date(), num).toISOString().substr(0, 10),
-      value: 1 + Math.random(),
+      date: subDays(new Date(), num).toISOString().substr(0, 20),
+      value: Math.random() * 10,
     });
   }
   
-  export default function Home() {
+  export default function Graph() {
     return (
-      <ResponsiveContainer width="100%" height={400}>
+        // Responsive containers from recharts let you not define fixed width/height
+      <ResponsiveContainer width="90%" height={500}>
         <AreaChart data={data}>
+
           <defs>
-            <linearGradient id="color" x1="0" y1="0" x2="0" y2="1">
+            <linearGradient id="gradientColor" x1="0" y1="0" x2="0" y2="1">
               <stop offset="0%" stopColor="#2451B7" stopOpacity={0.4} />
-              <stop offset="75%" stopColor="#2451B7" stopOpacity={0.05} />
+              <stop offset="90%" stopColor="#2451B7" stopOpacity={0.05} />
             </linearGradient>
           </defs>
   
-          <Area dataKey="value" stroke="#2451B7" fill="url(#color)" />
+          <Area dataKey="value" stroke="#2451B7" fill="url(#gradientColor)" />
 
           <XAxis
             dataKey="date"
-            axisLine={false}
+            axisLine={true}
             tickLine={false}
             tickFormatter={(str) => {
               const date = parseISO(str);
@@ -40,19 +42,20 @@ import { format, parseISO, subDays } from "date-fns";
             datakey="value"
             axisLine={false}
             tickLine={false}
-            tickCount={8}
-            tickFormatter={(number) => `$${number.toFixed(2)}`}
+            tickCount={0}
+            tickFormatter={(number) => `${number.toFixed(2)}`}
           />
   
-          <Tooltip content={<CustomTooltip />} />
+          <Tooltip content={<HoverInfo />} />
 
           <CartesianGrid opacity={0.1} vertical={false} />
+          
         </AreaChart>
       </ResponsiveContainer>
     );
   }
   
-  function CustomTooltip({ active, payload, label }) {
+  function HoverInfo({ active, payload, label }) {
     if (active) {
       return (
         <div className="tooltip">
