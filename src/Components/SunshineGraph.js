@@ -29,7 +29,7 @@ class SunshineGraph extends Component {
   }
 
   graphClick = async (value) => {
-      setTimeout(() => {this.props.updateTemperature(value)}, 1000)
+      //setTimeout(() => {this.props.updateTemperature(value)}, 1000)
   }
 
   render() {
@@ -60,7 +60,7 @@ class SunshineGraph extends Component {
     }
 
     return (
-        <ResponsiveContainer width="95%" height={600} >
+        <ResponsiveContainer width="95%" height={500} >
           <AreaChart data={data} onClick={this.graphClick(this.currentValue)}>
 
             <defs>

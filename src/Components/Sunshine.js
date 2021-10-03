@@ -7,7 +7,7 @@ import "./Sunshine.css"
 class Sunshine extends Component {
 
     state = {
-        temperature : 70
+        temperature : ""
     }
 
     updateTemperature = (value) => {
@@ -23,7 +23,7 @@ class Sunshine extends Component {
           <React.Fragment>
             <div id="contentTop">
                 <p id="contentTitle"> Available Sunshine </p>
-                <p id="contentValue"> {this.state.temperature} F </p>
+                <p id="contentValue"> {this.state.temperature} </p>
             </div>
             <div id="graph">
                 <SunShineGraph prevTemperature={this.state.temperature} updateTemperature={this.updateTemperature} />
