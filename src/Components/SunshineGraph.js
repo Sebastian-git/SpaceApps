@@ -21,15 +21,11 @@ class SunshineGraph extends Component {
       return (
       <div className="tooltip">
           <h4>{format(parseISO(label), "eeee, d MMM, yyyy")}</h4>
-          <p>{(payload[0].value.toFixed(2) * 9/5 * 100) + 32} °</p>
+          <p>{(payload[0].value.toFixed(2))} W/m^2 </p>
       </div>
       );
     }
     return null;
-  }
-
-  graphClick = async (value) => {
-      //setTimeout(() => {this.props.updateTemperature(value)}, 1000)
   }
 
   render() {
@@ -61,7 +57,7 @@ class SunshineGraph extends Component {
 
     return (
         <ResponsiveContainer width="95%" height={500} >
-          <AreaChart data={data} onClick={this.graphClick(this.currentValue)}>
+          <AreaChart data={data} >
 
             <defs>
               <linearGradient id="gradientColor" x1="0" y1="0" x2="0" y2="1">
