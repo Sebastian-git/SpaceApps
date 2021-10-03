@@ -21,7 +21,7 @@ class SunshineGraph extends Component {
       return (
       <div className="tooltip">
           <h4>{format(parseISO(label), "eeee, d MMM, yyyy")}</h4>
-          <p>{(payload[0].value.toFixed(2))} W/m^2 </p>
+          <p>{(payload[0].value.toFixed(2))} W/m<sup>2</sup> </p>
       </div>
       );
     }
