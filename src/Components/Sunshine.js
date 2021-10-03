@@ -7,8 +7,14 @@ import "./Sunshine.css"
 class Sunshine extends Component {
 
     state = {
+        temperature : 70
     }
 
+    updateTemperature = (value) => {
+      this.setState({
+        temperature : value
+      })
+    }
   
     render() {
 
@@ -17,6 +23,7 @@ class Sunshine extends Component {
           <React.Fragment>
             <div id="contentTop">
                 <p id="contentTitle"> Available Sunshine </p>
+                <p id="contentValue"> {this.state.temperature} F </p>
             </div>
             <div id="graph">
                 <SunShineGraph updateTemperature={this.updateTemperature} />
