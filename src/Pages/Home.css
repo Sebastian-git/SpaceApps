@@ -1,4 +1,12 @@
 #wrapper {
+    width: 100%;
     background-color: black;
     color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#content {
+    width: 100%;
 }

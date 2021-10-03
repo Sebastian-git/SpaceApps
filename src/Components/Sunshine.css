@@ -1,0 +1,15 @@
+ #contentTop{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+
+#contentTitle {
+    margin: auto;
+    text-align: center;
+}
+
+#contentValue {
+    margin: auto;
+    text-align: center;
+}

@@ -14,7 +14,7 @@ import HoverInfo from "./HoverInfo"
   
   export default function Graph() {
     return (
-      <ResponsiveContainer width="90%" height={500}>
+      <ResponsiveContainer width={1000} height={500}>
         <AreaChart data={data}>
 
           <defs>
