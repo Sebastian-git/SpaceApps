@@ -1,13 +1,20 @@
 import React, { Component } from "react"
 import "./Home.css"
-import SunShineGraph from "../Components/Sunshine.js"
 
-const axios = require('axios')
+import Sunshine from "../Components/Sunshine.js"
+
+import Taskbar from "../Components/Taskbar.js"
 
 class Home extends Component {
 
   state = {
-      
+      setting : "sunshine"
+  }
+
+  setSetting = (name) => {
+    this.setState({
+      setting : name
+    })
   }
 
   render() {
@@ -17,12 +24,12 @@ class Home extends Component {
 
       <div id="wrapper">
         <div id="content">
-          <div id="graph">
-            <SunShineGraph />
+          <div>
+            <Sunshine setting={this.state.setting} />
           </div>
         </div>
-        <div id="taskbar">
-
+        <div id="taskbarWrapper">
+          <Taskbar setSetting={this.setSetting} />
         </div>
 
       </div>
