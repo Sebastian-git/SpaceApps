@@ -1,21 +1,20 @@
 import React, { Component } from "react";
-import "./Taskbar.css"
+
+import precipitation from "../img/precipitationPlain.png";
+import sunshine from "../img/sunshinePlain.png";
+import wind from "../img/windPlain.png";
+
+import "./Taskbar.css";
 
 class Taskbar extends Component {
   render() {
     return (
       <React.Fragment>
         <div id="tab">
-          <button className="button">Percipitation</button>
-          <button className="button">Sunshine</button>
-          <button className="button">Wind</button>
+            <img className="img" id="precipitation" src={precipitation} alt="precipitation"></img>
+            <img className="img" id="sunshine" src={sunshine} alt="sunshine"></img>
+            <img className="img" id="wind" src={wind} alt="wind"></img>
         </div>
-
-        <div id="Percipitation"></div>
-
-        <div id="Sunshine"></div>
-
-        <div id="Wind"></div>
       </React.Fragment>
     );
   }
