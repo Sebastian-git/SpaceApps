@@ -1,6 +1,6 @@
  #contentTop{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     text-align: center;
 }
 
