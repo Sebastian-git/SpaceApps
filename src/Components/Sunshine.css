@@ -1,15 +1,13 @@
  #contentTop{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     text-align: center;
 }
 
 #contentTitle {
-    margin: auto;
     text-align: center;
 }
 
 #contentValue {
-    margin: auto;
     text-align: center;
 }

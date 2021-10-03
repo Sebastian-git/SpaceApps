@@ -1,5 +1,8 @@
 import React, { Component } from "react"
+
 import SunShineGraph from "../Components/SunshineGraph.js"
+
+import "./Sunshine.css"
 
 class Sunshine extends Component {
 

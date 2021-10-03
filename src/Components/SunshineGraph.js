@@ -14,7 +14,7 @@ import HoverInfo from "./HoverInfo"
   
   export default function Graph() {
     return (
-      <ResponsiveContainer width={1000} height={500}>
+      <ResponsiveContainer width="90%" height={600}>
         <AreaChart data={data}>
 
           <defs>
@@ -28,7 +28,7 @@ import HoverInfo from "./HoverInfo"
 
           <XAxis
             dataKey="date"
-            axisLine={true}
+            axisLine={false}
             tickLine={false}
             tickFormatter={(str) => {
               const date = parseISO(str);
