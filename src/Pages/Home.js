@@ -1,6 +1,8 @@
 import React, { Component } from "react"
 import "./Home.css"
-import BarGraph from "../Components/Sunshine.js"
+import SunShineGraph from "../Components/Sunshine.js"
+
+const axios = require('axios')
 
 class Home extends Component {
 
@@ -9,12 +11,21 @@ class Home extends Component {
   }
 
   render() {
+
     return (
     <React.Fragment>
 
+      <div id="wrapper">
+        <div id="content">
+          <div id="graph">
+            <SunShineGraph />
+          </div>
+        </div>
+        <div id="taskbar">
 
+        </div>
 
-        <BarGraph />
+      </div>
         
     </React.Fragment>
     )
