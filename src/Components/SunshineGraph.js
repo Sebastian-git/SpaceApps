@@ -9,27 +9,27 @@ class SunshineGraph extends Component {
 
   constructor() {
     super()
-    this.currentValue = 0
+    this.currentValue = 70
   }
 
   HoverInfo = ({active, payload, label}) => {
     if (active) {
-      this.currentValue = payload[0].value
-      console.log(payload[0].value)
-        return (
-        <div className="tooltip">
-            <h4>{format(parseISO(label), "eeee, d MMM, yyyy")}</h4>
-            <p>{(payload[0].value.toFixed(2) * 9/5 * 100) + 32} °</p>
-        </div>
-        );
+      if (this.currentValue !== payload[0].value) {
+        this.currentValue = (payload[0].value * 9/5 * 100) + 32
+      }
+      
+      return (
+      <div className="tooltip">
+          <h4>{format(parseISO(label), "eeee, d MMM, yyyy")}</h4>
+          <p>{(payload[0].value.toFixed(2) * 9/5 * 100) + 32} °</p>
+      </div>
+      );
     }
     return null;
   }
 
   graphClick = async (value) => {
-    console.log(value)
-    //this.props.updateTemperature(value)
-    //setTimeout(() => {}, 1000);
+      setTimeout(() => {this.props.updateTemperature(value)}, 1000)
   }
 
   render() {
@@ -42,9 +42,6 @@ class SunshineGraph extends Component {
     let mm = String(today.getMonth() + 1).padStart(2, '0')
     let yyyy = today.getFullYear()
     today = yyyy + mm + dd
-
-    console.log("date: ", splitData[0].substring(1, 15))
-    console.log("value: ", splitData[0].substring(16, 20))
 
     let value
     const data = []
@@ -61,8 +58,6 @@ class SunshineGraph extends Component {
         value: value
       });
     }
-
-    console.log(this.currentValue)
 
     return (
         <ResponsiveContainer width="95%" height={600} >
