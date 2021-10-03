@@ -29,7 +29,7 @@ class Home extends Component {
           </div>
         </div>
         <div id="taskbarWrapper">
-          <Taskbar setSetting={this.setSetting} />
+            <Taskbar setSetting={this.setSetting} />
         </div>
 
       </div>

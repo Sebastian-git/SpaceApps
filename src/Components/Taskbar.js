@@ -1,18 +1,24 @@
-//import sunshineImage from '../imgs/name'
-
-import React, { Component } from "react"
+import React, { Component } from "react";
+import "./Taskbar.css"
 
 class Taskbar extends Component {
-    render() {
-        return (
-            // <img class="taskbarChild" src={sunshineImage} alt="Sunshine" onClick={() => this.props.setSetting("sunshine")} />
-            // <img class="taskbarChild" src={sunshineImage} alt="Sunshine" onClick={() => this.props.setSetting("sunshine")} />
-            // <img class="taskbarChild" src={sunshineImage} alt="Sunshine" onClick={() => this.props.setSetting("sunshine")} />
-            <React.Fragment>
-                
-            </React.Fragment>
-        )
-    }
+  render() {
+    return (
+      <React.Fragment>
+        <div id="tab">
+          <button className="button">Percipitation</button>
+          <button className="button">Sunshine</button>
+          <button className="button">Wind</button>
+        </div>
+
+        <div id="Percipitation"></div>
+
+        <div id="Sunshine"></div>
+
+        <div id="Wind"></div>
+      </React.Fragment>
+    );
+  }
 }
 
 export default Taskbar;
