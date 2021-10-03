@@ -7,8 +7,8 @@ import "./Sunshine.css"
 class Sunshine extends Component {
 
     state = {
-        
     }
+
   
     render() {
 
@@ -17,10 +17,9 @@ class Sunshine extends Component {
           <React.Fragment>
             <div id="contentTop">
                 <p id="contentTitle"> Available Sunshine </p>
-                <p id="contentValue"> 70 F </p>
             </div>
             <div id="graph">
-                <SunShineGraph />
+                <SunShineGraph updateTemperature={this.updateTemperature} />
             </div>
           </React.Fragment>
           )

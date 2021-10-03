@@ -5,8 +5,13 @@ import React, { Component } from "react"
 class Taskbar extends Component {
     render() {
         return (
+
+            // <p class="taskbarChild" onClick={() => }
+
             // <img class="taskbarChild" src={sunshineImage} alt="Sunshine" onClick={() => this.props.setSetting("sunshine")} />
+
             // <img class="taskbarChild" src={sunshineImage} alt="Sunshine" onClick={() => this.props.setSetting("sunshine")} />
+
             // <img class="taskbarChild" src={sunshineImage} alt="Sunshine" onClick={() => this.props.setSetting("sunshine")} />
             <React.Fragment>
                 

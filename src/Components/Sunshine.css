@@ -4,10 +4,8 @@
     text-align: center;
 }
 
-#contentTitle {
-    text-align: center;
-}
-
-#contentValue {
-    text-align: center;
+#graph {
+    margin-left: -30px;
+    display: flex;
+    align-items: center;
 }
