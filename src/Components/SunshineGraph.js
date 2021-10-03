@@ -14,7 +14,8 @@ class SunshineGraph extends Component {
 
   HoverInfo = ({active, payload, label}) => {
     if (active) {
-      this.currentValue = payload
+      this.currentValue = payload[0].value
+      console.log(payload[0].value)
         return (
         <div className="tooltip">
             <h4>{format(parseISO(label), "eeee, d MMM, yyyy")}</h4>
@@ -25,8 +26,10 @@ class SunshineGraph extends Component {
     return null;
   }
 
-  graphClick = (value) => {
+  graphClick = async (value) => {
     console.log(value)
+    //this.props.updateTemperature(value)
+    //setTimeout(() => {}, 1000);
   }
 
   render() {
@@ -63,7 +66,7 @@ class SunshineGraph extends Component {
 
     return (
         <ResponsiveContainer width="95%" height={600} >
-          <AreaChart data={data}>
+          <AreaChart data={data} onClick={this.graphClick(this.currentValue)}>
 
             <defs>
               <linearGradient id="gradientColor" x1="0" y1="0" x2="0" y2="1">
