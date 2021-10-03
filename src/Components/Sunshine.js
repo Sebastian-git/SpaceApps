@@ -23,7 +23,6 @@ class Sunshine extends Component {
           <React.Fragment>
             <div id="contentTop">
                 <p id="contentTitle"> Available Sunshine </p>
-                <img id="contentImg"> </img>
             </div>
             <div id="graph">
                 <SunShineGraph prevTemperature={this.state.temperature} updateTemperature={this.updateTemperature} />
