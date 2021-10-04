@@ -1,12 +1,12 @@
 import React, { Component } from "react"
 
-import SunShineGraph from "../Components/SunshineGraph.js"
+import WindGraph from "../Components/WindGraph.js"
 
 import "./Sunshine.css"
 
-import sunshineImage from "../img/sunshinePlain.png"
+import windImage from "../img/windPlain.png"
 
-class Sunshine extends Component {
+class Wind extends Component {
 
     state = {
         temperature : ""
@@ -19,27 +19,26 @@ class Sunshine extends Component {
     }
   
     render() {
-
-      if (this.props.setting === "sunshine") {
+      console.log("Called")
+      if (this.props.setting === "wind") {
         return (
           <React.Fragment>
             <div id="contentTop">
-                <p id="contentTitle"> Available Sunshine </p>
-                <img id="contentImg" src={sunshineImage} align="right" alt="Top sunshine pic"></img>
+                <p id="contentTitle"> Wind Speeds </p>
+                <img id="contentImg" src={windImage} align="right" alt="Top wind pic"></img>
             </div>
             <div id="graph">
-                <SunShineGraph prevTemperature={this.state.temperature} updateTemperature={this.updateTemperature} />
+                <WindGraph prevTemperature={this.state.temperature} updateTemperature={this.updateTemperature} />
             </div>
           </React.Fragment>
           )
       } else {
-        
         return (
           <React.Fragment>
           </React.Fragment>
-          )
+        )
       }
     }
   }
   
-  export default Sunshine;
+  export default Wind;

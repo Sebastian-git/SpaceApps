@@ -2,26 +2,18 @@ import React, { Component } from "react"
 import { ResponsiveContainer, AreaChart, XAxis, YAxis, Area, Tooltip, CartesianGrid } from "recharts"
 import { format, parseISO, subDays } from "date-fns"
 
-import IrradianceData from "../data/irradiance.json"
+import WindData from "../data/wind.json"
 
 
-class SunshineGraph extends Component {
-
-  constructor() {
-    super()
-    this.currentValue = 70
-  }
+class WindGraph extends Component {
 
   HoverInfo = ({active, payload, label}) => {
     if (active) {
-      if (this.currentValue !== payload[0].value) {
-        this.currentValue = (payload[0].value * 9/5 * 100) + 32
-      }
       
       return (
       <div className="tooltip">
           <h4>{format(parseISO(label), "eeee, d MMM, yyyy")}</h4>
-          <p>{(payload[0].value.toFixed(2))} W/m<sup>2</sup> </p>
+          <p>{(payload[0].value.toFixed(2))} m/s </p>
       </div>
       );
     }
@@ -30,8 +22,8 @@ class SunshineGraph extends Component {
 
   render() {
 
-    let irrData = JSON.stringify(IrradianceData, null, 1)
-    let splitData = irrData.split(/\r?\n/).slice(13, 4183)
+    let windData = JSON.stringify(WindData, null, 1)
+    let splitData = windData.split(/\r?\n/).slice(13, 4183)
 
     let today = new Date()
     let dd = String(today.getDate()).padStart(2, '0')
@@ -95,4 +87,4 @@ class SunshineGraph extends Component {
   }
 }
 
-export default SunshineGraph
+export default WindGraph
