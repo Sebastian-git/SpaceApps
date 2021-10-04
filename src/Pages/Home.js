@@ -14,7 +14,6 @@ class Home extends Component {
   }
 
   setSetting = (name) => {
-    console.log("Passed", name)
     this.setState({
       setting : name
     })
@@ -34,7 +33,7 @@ class Home extends Component {
           </div>
         </div>
         <div id="taskbarWrapper">
-            <Taskbar setSetting={this.setSetting} />
+            <Taskbar setting={this.state.setting} setSetting={this.setSetting} />
         </div>
 
       </div>

@@ -24,7 +24,7 @@ class Precipitation extends Component {
         return (
           <React.Fragment>
             <div id="contentTop">
-                <p id="contentTitle"> Available Precipitation </p>
+                <p id="contentTitle"> Precipitation </p>
                 <img id="contentImg" src={precipitationImage} align="right" alt="Top sunshine pic"></img>
             </div>
             <div id="graph">

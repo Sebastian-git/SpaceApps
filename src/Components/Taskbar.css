@@ -10,17 +10,14 @@
   margin-bottom: 5%;
 }
 
-#precipitation:hover {
-  background-color: rgb(70, 140, 200);
+#precipitation {
   border-radius: 20%;
 }
 
-#sunshine:hover {
-  background-color: rgb(210, 125, 25);
+#sunshine {
   border-radius: 20%;
 }
 
-#wind:hover {
-  background-color: rgb(130, 40, 40);
+#wind {
   border-radius: 20%;
 }

@@ -10,6 +10,29 @@ class Taskbar extends Component {
   
   render() {
 
+
+    let elem = document.getElementById(this.props.setting)
+    let setting = this.props.setting
+
+    if (elem === null) {
+    }
+    else if (setting === "wind") {
+      elem.style.backgroundColor = "rgb(130, 40, 40)"
+      document.getElementById("precipitation").style.backgroundColor = "black"
+      document.getElementById("sunshine").style.backgroundColor = "black"
+    }
+    else if (setting === "precipitation") {
+      elem.style.backgroundColor = "rgb(70, 140, 200)"
+      document.getElementById("wind").style.backgroundColor = "black"
+      document.getElementById("sunshine").style.backgroundColor = "black"
+    }
+    else if (setting === "sunshine") {
+      elem.style.backgroundColor = "rgb(210, 125, 25)"
+      document.getElementById("precipitation").style.backgroundColor = "black"
+      document.getElementById("wind").style.backgroundColor = "black"
+    }
+
+
     return (
       <React.Fragment>
         <div id="tab">        

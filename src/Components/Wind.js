@@ -19,12 +19,11 @@ class Wind extends Component {
     }
   
     render() {
-      console.log("Called")
       if (this.props.setting === "wind") {
         return (
           <React.Fragment>
             <div id="contentTop">
-                <p id="contentTitle"> Wind Speeds </p>
+                <p id="contentTitle"> Wind </p>
                 <img id="contentImg" src={windImage} align="right" alt="Top wind pic"></img>
             </div>
             <div id="graph">
