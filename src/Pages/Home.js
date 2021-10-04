@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import "./Home.css"
 
+import Precipitation from "../Components/Precipitation"
 import Sunshine from "../Components/Sunshine.js"
 import Wind from "../Components/Wind.js"
 
@@ -29,6 +30,7 @@ class Home extends Component {
           <div>
             <Sunshine setting={this.state.setting} />
             <Wind setting={this.state.setting} />
+            <Precipitation setting={this.state.setting} />
           </div>
         </div>
         <div id="taskbarWrapper">

@@ -7,7 +7,9 @@ import wind from "../img/windPlain.png";
 import "./Taskbar.css";
 
 class Taskbar extends Component {
+  
   render() {
+
     return (
       <React.Fragment>
         <div id="tab">        
@@ -18,7 +20,7 @@ class Taskbar extends Component {
             <img className="img" id="wind" src={wind} alt="wind" onClick={() => this.props.setSetting("wind")}></img>
         </div>
       </React.Fragment>
-    );
+    )
   }
 }
 
