@@ -24,7 +24,7 @@ class Sunshine extends Component {
         return (
           <React.Fragment>
             <div id="contentTop">
-                <p id="contentTitle"> Sunshine </p>
+                <p id="contentTitle"> Irradiance </p>
                 <img id="contentImg" src={sunshineImage} align="right" alt="Top sunshine pic"></img>
             </div>
             <div id="graph">

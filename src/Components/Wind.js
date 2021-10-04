@@ -23,7 +23,7 @@ class Wind extends Component {
         return (
           <React.Fragment>
             <div id="contentTop">
-                <p id="contentTitle"> Wind </p>
+                <p id="contentTitle"> Wind Speed </p>
                 <img id="contentImg" src={windImage} align="right" alt="Top wind pic"></img>
             </div>
             <div id="graph">
