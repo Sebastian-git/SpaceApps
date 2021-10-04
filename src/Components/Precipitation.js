@@ -2,7 +2,7 @@ import React, { Component } from "react"
 
 import PrecipitationGraph from "../Components/PrecipitationGraph.js"
 
-import "./Sunshine.css"
+import "./Data.css"
 
 import precipitationImage from "../img/precipitationPlain.png"
 

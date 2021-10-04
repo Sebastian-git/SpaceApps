@@ -2,7 +2,7 @@ import React, { Component } from "react"
 
 import WindGraph from "../Components/WindGraph.js"
 
-import "./Sunshine.css"
+import "./Data.css"
 
 import windImage from "../img/windPlain.png"
 
